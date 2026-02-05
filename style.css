@@ -1,4 +1,4 @@
-﻿/* ===== ОСНОВНЫЕ СТИЛИ И СБРОС ===== */
+/* ===== ОСНОВНЫЕ СТИЛИ И СБРОС ===== */
 * {
     margin: 0;
     padding: 0;
@@ -511,6 +511,7 @@ body {
         flex-direction: column;
     }
 }
+
 /* ===== ДОПОЛНИТЕЛЬНЫЕ СТИЛИ ДЛЯ ТАБЛИЦЫ ЛИДЕРОВ ===== */
 
 .leaderboard-date {
@@ -575,13 +576,43 @@ body {
         padding: 10px 8px;
         font-size: 0.9rem;
     }
-
 }
+
 /* Скрываем отладочные кнопки на телефонах */
 @media (max-width: 768px) {
   button[onclick*="localStorage.clear"],
   button[onclick*="resetAllButtons"],
   button[onclick*="endGame"] {
     display: none !important;
+  }
+}
+
+/* Уменьшаем область слова на телефонах */
+@media (max-width: 480px) {
+  .word-display {
+    font-size: 1.3rem !important;
+    min-height: 60px !important;
+    padding: 15px 10px !important;
+  }
+  
+  .blank-space {
+    width: 35px !important;
+    height: 35px !important;
+    line-height: 29px !important;
+    font-size: 1.2rem !important;
+  }
+  
+  .keyboard-section {
+    padding: 15px !important;
+  }
+  
+  .letter-btn {
+    height: 50px !important;
+    font-size: 1.3rem !important;
+  }
+  
+  .control-btn {
+    padding: 12px 6px !important;
+    font-size: 0.9rem !important;
   }
 }
