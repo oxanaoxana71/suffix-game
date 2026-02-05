@@ -575,4 +575,13 @@ body {
         padding: 10px 8px;
         font-size: 0.9rem;
     }
+
+}
+/* Скрываем отладочные кнопки на телефонах */
+@media (max-width: 768px) {
+  button[onclick*="localStorage.clear"],
+  button[onclick*="resetAllButtons"],
+  button[onclick*="endGame"] {
+    display: none !important;
+  }
 }
